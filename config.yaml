@@ -1,0 +1,7 @@
+url: http://dotnetcoding.ru
+name: .NET программирование
+description:
+canonifyURLs: true
+theme: "hugo-bootstrap-premium"
+publishDir: "public"
+baseURL: http://dotnetcoding.ru

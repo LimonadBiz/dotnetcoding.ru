@@ -1,0 +1,11 @@
+*.swp
+*.swo
+*.pyc
+.coverage
+.idea/*
+.idea
+.tmp/*
+public
+site.tar
+site.tar.*
+wp-hugo.zip
