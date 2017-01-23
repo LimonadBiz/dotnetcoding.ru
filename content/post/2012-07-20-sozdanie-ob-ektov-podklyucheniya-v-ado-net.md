@@ -63,3 +63,70 @@ categories:
   - .NET Программирование
 
 ---
+ADO.NET оформляет функции установления подключений к конкретной базе данных в виде типичного класса подключения. Давайте создадим экземпляр класса — т.е. объект — подключения. Пример для класса SqLConnection но базовые концепции в других классах подключения для различных поставщиков такие же. Различные объекты подключения можно создавать, создавая новые экземпляры соответствующих классов подключения.<!--more--> Вот как это делается:
+
+
+  
+C#
+
+<pre lang="cpp">SqlConrertion LestConnection = new SqlCcnnscr.ion {) ;</pre>
+
+VB.NET
+
+<pre lang="cpp">Dim testConr.ection As New SqiConnection</pre>
+
+Все очень просто: но, как вы, видимо, догадались, это еще не все, т.к. мы не указали объекту подключения, к какой базе данных нужно подключиться, какие права доступа использовать и т.д. Эти параметры можно задать с помощью свойства ConnectionString объекта SqLConnection:
+
+C#
+
+<pre lang="cpp">SqlConnection testConnection = new Sql cornecUcn 0 ;
+
+strino testConnectionStnnq -
+
+"Data Source=(local);Initial Catalog-iest;Irtegratea Secunty-SSPl";
+
+testConnection.ConnectionString = testConnectionString;
+</pre>
+
+VB.NET
+
+<pre lang="cpp">Dim testConnection As New SqlConnection
+
+Dim testConnectionStrmg As String = "Data Source-(local) ;	&#038;
+
+"Initial Cataiog-Iesc;Integrated S<?c-jrity=SSPI"
+
+testConnection.ConnectionString = testConnectionString
+</pre>
+
+
+<p>
+  Этот код подютавливает объект подключения к открытию подключения к SQL Server на локальной машине с помощью Windows-аутентификации и к подключению к базе данных с именем Test. Но вместо него можно воспользоваться одним из конструкторов класса SqlConnecti on и получить уже готовый объект
+</p>
+
+
+<p>
+  <strong>SqlConnection:</strong>
+</p>
+
+
+<p>
+  C#
+</p>
+
+
+<pre lang="cpp">
+SqlConnection teatConnection= new SqlConnection (
+
+"Data Source=(local);Initial Cataloguest;Integratea Seourity-SSPI");
+
+VB.NET
+
+Dim testConnection As New SqlConnection(
+
+"Datd Sourcs=(local);Initial Catalog-I'est; Integrated Secunty-SSPI'')</pre>
+
+
+<p>
+  Итак можно будет подключить готовый объект SqiConnection с помощью лишь одной строки кода. А теперь, имея подготовленный таким образом объект подключения, для открытия подключения к указанной базе данных нужно лишь вызвать метод Open.
+</p>

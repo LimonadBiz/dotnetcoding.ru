@@ -1,7 +1,7 @@
 url: http://dotnetcoding.ru
+baseURL: http://dotnetcoding.ru
 name: .NET программирование
-description:
+description: NET программирование
 canonifyURLs: true
 theme: "hugo-bootstrap-premium"
 publishDir: "public"
-baseURL: http://dotnetcoding.ru
